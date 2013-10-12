@@ -1,0 +1,10 @@
+<g:render template="project-preview" collection="${projects}" var="project"/>
+
+Projektek listája: ${count}
+<g:each var="project" in="${projects}">
+    <p>Projekt neve: ${project.title}</p>
+    <p>Célzott összeg: ${project.neededMoney}</p>
+    <p>Eddig összegyűlt: ${project.collectedMoney}</p>
+    <p>Határidő: ${project.endDate}</p>
+    <p>Leírás: ${project.description}</p>
+</g:each>

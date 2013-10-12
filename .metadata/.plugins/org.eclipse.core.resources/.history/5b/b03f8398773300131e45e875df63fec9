@@ -1,0 +1,2 @@
+Projektek listája: ${count}
+<g:render template="project-preview" collection="${projects}" var="project"/>

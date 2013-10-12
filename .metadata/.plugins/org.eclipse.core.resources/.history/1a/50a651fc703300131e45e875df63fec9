@@ -1,0 +1,15 @@
+package projectsolidarity.domain
+
+class Donation {
+	Date donationTime
+	int amount
+	User user
+	Project project
+	
+    static constraints = {
+		donationTime blank: false
+		amount min: 1
+		user nullable: false
+		project nullable: false
+    }
+}

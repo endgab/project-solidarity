@@ -1,0 +1,13 @@
+package projectsolidarity.controller
+
+import projectsolidarity.domain
+
+class ProjectController {
+	def index() {
+		redirect action:"list", params:params
+	}
+	
+	def list = {
+		[ projects:Project.list(params), count:Project.count() ]
+	}
+}
