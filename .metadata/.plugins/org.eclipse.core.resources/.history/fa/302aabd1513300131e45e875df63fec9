@@ -1,7 +1,0 @@
-package domain;
-
-enum PaymentMethod {
-	BANK_CARD,
-	BANK_TRANSFER,
-	CHECK
-}

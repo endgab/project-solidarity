@@ -1,3 +1,0 @@
-<g:resource dir="css" file="main.css" />
-Projektek listája: ${count}
-<g:render template="project-preview" collection="${projects}" var="project"/>
