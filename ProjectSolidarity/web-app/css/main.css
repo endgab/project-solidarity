@@ -596,22 +596,22 @@ a.skip {
 }
 
 div {
-margin: 0;
-padding: 0;
-border: 0;
-font: inherit;
-font-size: 100%;
-vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
 }
 
 ul, menu, dir {
-display: block;
-list-style-type: disc;
--webkit-margin-before: 1em;
--webkit-margin-after: 1em;
--webkit-margin-start: 0px;
--webkit-margin-end: 0px;
--webkit-padding-start: 40px;
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
 }
 
 .project {
@@ -769,23 +769,23 @@ left: 10px;
 }
 
 .project-card-wrap .project-card ul.project-stats {
-margin: 0;
-padding: 0;
-border: 0;
-overflow: hidden;
-width: 100%;
-font-size: 10px;
-text-transform: uppercase;
-position: absolute;
-color: #0b1902;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	width: 100%;
+	font-size: 12px;;
+	position: absolute;
+	color: #0b1902;
 }
 
 .project-card-wrap .project-card ul.project-stats strong {
-font-size: 12px;
-line-height: 12px;
-margin: 0;
-padding-top: 2px;
-color: #0b1902;
+	display:block;
+	font-size: 12px;
+	line-height: 12px;
+	margin: 0;
+	padding-top: 2px;
+	color: #0b1902;
 }
 
 .project-card-wrap .project-card ul.project-stats li {
@@ -812,4 +812,16 @@ border-left: 1px solid #fff;
 margin: 0 !important;
 }
 
+.location-name {
+	color: grey;
+	font-size: 12px;
+	
+}
 
+.pager {
+	
+}
+
+.project-list {
+	height: 400px;
+}

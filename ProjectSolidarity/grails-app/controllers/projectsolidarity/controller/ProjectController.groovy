@@ -7,7 +7,10 @@ class ProjectController {
 		redirect action:"list", params:params
 	}
 	
+	final int projectsPerPage = 3;
 	def list = {
-		[ projects:Project.list(params), count:Project.count() ]
+		def offset = params.offset ?: 0;
+		[ projects:Project.list(max: projectsPerPage, offset : offset, sort: "daysToGo", order: "asc"),  
+			projectCount:Project.count(), projectsPerPage:projectsPerPage ]
 	}
 }

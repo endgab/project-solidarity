@@ -11,19 +11,19 @@
 	<strong>
 	<a href="/projects/1542851942/unreal-rides?ref=home_location" target="">${project.title}</a>
 	</strong>
-	<span>
-		by Semihero.com
-	</span>
 </h2>
 <p class="bbcard_blurb">
-	An insane 3D race of cars NOT MEANT for racing
+	${project.shortDescription}
 </p>
 <ul class="project-meta">
 	<li>
-		<a href="/discover/places/budapest-hu?ref=card" target="">
-			<span class="ss-icon ss-location"></span>
-			<span class="location-name">Budapest, Hungary</span>
-		</a>
+		<span class="ss-icon ss-location"></span>
+		<span class="location-name">
+			${project.locationCity}
+			<g:if test="${project.locationCounty && project.locationCounty != project.locationCity}">
+    			, ${project.locationCounty} 
+			</g:if>
+		</span>
 	</li>
 </ul>
 <div class="project-pledged-successful" style="display: none;">
@@ -35,22 +35,17 @@
 </div>
 <ul class="project-stats">
 	<li class="first funded">
-		<strong>0%</strong>funded
+		<strong>${project.collectedPercentage}%</strong> összegyűlt
 	</li>
 	<li class="pledged">
-	<strong><span class="money gbp no-code">£31.00</span></strong>
-		pledged
-	</li>
-	<li class="last successful" style="display: none;">
-		<strong>Funded</strong>
-		<div class="deadline">
-		</div>
+	<strong><span class="money gbp no-code">${project.collectedMoney} Ft</span></strong>
+		szükséges
 	</li>
 	<li class="last ksr_page_timer" data-end_time="2013-11-03T08:25:55Z">
 		<strong>
-			<div class="num">21</div>
+			<div class="num">${project.daysToGo}</div>
 		</strong>
-		<div class="span text" data-word="left">days to go</div>
+		<div class="span text" data-word="left">nap</div>
 	</li>
 </ul>
 

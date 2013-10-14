@@ -8,22 +8,27 @@ class BootStrap {
 		def x = "hello"
         User user1 = new User(userName: 'user1', email: 'user1@email.com', password: 'test1')  
         User user2 = new User(userName: 'user2', email: 'user2@email.com', password: 'test2')  
-  
-        Project project1 = new Project(title: 'TestProject1', description: 'In memory test project.', shortDescription: 'In memory test project.',
-			locationCountry : "Magyarország", locationCounty : "Pest", locationCity : "Budapest",  
-			status : ProjectStatus.ACTIVE, neededMoney : 10000, collectedMoney : 0, collectedPercentage : 0,
-			startDate : new Date(), endDate : new Date(), daysToGo : 100,
-			owner: user1, updateTime : new Date(), creationTime : new Date())
-		
-        user1.save(true) 
+		user1.save(true)
 		if(user1.hasErrors()){
 			println user1.errors
 		  }
 		
-        project1.save(true)
-		if(project1.hasErrors()){
-			println project1.errors
-		  }
+		
+		Project project;
+		for(int i = 0; i < 10; i++)
+		{
+			project = new Project(title: 'TestProject' + i, description: 'In memory test project ' + i, 
+				shortDescription: 'shortDescription' + i,
+				locationCountry : "Magyarország", locationCounty : "Budapest", locationCity : "Budapest",
+				status : ProjectStatus.ACTIVE, neededMoney : 10000, collectedMoney : 1000, collectedPercentage : 10,
+				startDate : new Date(), endDate : new Date(), daysToGo : 100,
+				owner: user1, updateTime : new Date(), creationTime : new Date())
+			
+			project.save(true)
+			if(project.hasErrors()){
+				println project.errors
+			  }
+		}
 		
 		println "Project count: " + Project.count()
     }  

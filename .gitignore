@@ -1,2 +1,6 @@
-target
-web-app/web-inf
+ProjectSolidarity/target
+ProjectSolidarity/target-eclipse
+ProjectSolidarity/web-app/web-inf
+Servers/
+.metadata/
+RemoteSystemsTempFiles/
