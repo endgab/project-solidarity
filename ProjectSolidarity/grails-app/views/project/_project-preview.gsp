@@ -3,9 +3,10 @@
 <div class="project-card">
 
 <div class="project-thumbnail">
-	<a href="/projects/1542851942/unreal-rides?ref=home_location" target="">
-		<img alt="Photo-little" class="projectphoto-little" height="150" src="https://s3.amazonaws.com/ksr/projects/515817/photo-little.jpg?1379159942" width="200">
-	</a>
+	<g:link action='show' id='${project.id}'>
+		<img alt="Photo-little" class="projectphoto-little" height="150" width="200"
+		src="https://s3.amazonaws.com/ksr/projects/515817/photo-little.jpg?1379159942"/>
+	</g:link>
 </div>
 <h2 class="bbcard_name">
 	<strong>
@@ -30,7 +31,7 @@
 	<strong>Successful!</strong>
 </div>
 <div class="project-pledged-wrap">
-	<div class="project-pledged" style="width: 0.18%">
+	<div class="project-pledged" style="width: ${project.collectedPercentage}%">
 	</div>
 </div>
 <ul class="project-stats">

@@ -743,7 +743,17 @@ color: #fff;
 padding: 0 10px;
 }
 
-.project-card-wrap .project-card .project-pledged-wrap {
+.project-card-wrap .project-card .project-pledged-wrap .project-pledged {
+background: #76cc1e;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+height: 8px;
+}
+
+.project-card-wrap .project-card .project-pledged-wrap  {
 -webkit-border-radius: 4px;
 -moz-border-radius: 4px;
 -ms-border-radius: 4px;
@@ -824,4 +834,1070 @@ margin: 0 !important;
 
 .project-list {
 	height: 400px;
+}
+
+
+<!-- dakujem.sme.sk css for project show-->
+@font-face {
+    font-family: 'aller_lightregular';
+    src: url('/styles/type/aller_lt-webfont.eot');
+    src: url('/styles/type/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/styles/type/aller_lt-webfont.woff') format('woff'),
+         url('/styles/type/aller_lt-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 100%;
+	line-height: 1.3em;
+	background: #fbf9f2;
+	color: #3b281a;
+}
+p {
+	margin: 15px 0;
+}
+h1, h2 {
+	font-size:2em;
+	margin: 1em 0 0;
+	line-height: 1.4em;
+	font-family: 'aller_lightregular';
+}
+h3 {
+	font-size: 1.4em;
+	margin: 1em 0 0;
+	font-weight: bold;
+}
+h4 {
+	font-size: 1.1em;
+	margin: 0.8em 0;
+}
+a {
+	color: #de5a12;
+}
+a:hover {
+	color: #ff975e;
+}
+em {
+	font-style: italic;
+}
+b, strong {
+	font-weight: bold;
+}
+small {
+	font-size: smaller;
+}
+ul {
+	list-style-type: disc;
+	list-style-position:inside;
+}
+.clear {
+	clear: both;
+	line-height: 1px;
+	display: block;
+}
+.center {
+	text-align: center;
+}
+.clear-both {
+	clear: both;
+}
+.button {
+	background: url("/images/button.png?r=1") left top no-repeat;
+	height: 27px;
+	color: white;
+	display: inline-block;
+	line-height: 26px;
+	position: relative;
+	font-size: 0.8em;
+	padding: 0 5px 0 25px;
+	text-decoration: none;
+	text-shadow: 0 1px rgba(0,0,1,.38);
+}
+.button:hover {
+	opacity: 0.8;
+	color: white;
+}
+.see-all .icon {
+	background: url("/images/dakujeme-sprite.png") -2px -2px no-repeat;
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 3px 0 0;
+	line-height: 25px;
+}
+.button .right {
+	position: absolute;
+	top: 0;
+	right: -20px;
+	height: 27px;
+	width: 20px;
+	background: url("/images/button.png?r=1") right top no-repeat;
+}
+/*
+	SME pager
+*/
+.pager-wrap {
+	background: white;
+	height: 52px;
+        min-width: 960px;
+}
+#sme_pager {
+	z-index: 900;
+	max-width: 960px;
+	width: 100%;
+	margin: 0 auto;
+
+}
+#piano-root {
+	min-width: 960px;
+}
+
+/*
+	Layout
+*/
+.site-wrap {
+	width: 960px;
+	margin: auto;
+	position: relative;
+	padding: 0 0 20px 0;
+}
+.left-col {
+	width: 732px;
+	float: left;
+	position: relative;
+	clear: both;
+}
+.right-col {
+	width: 180px;
+	float: right;
+	background: #f2eee1 url("/images/right-col-bottom.png") center bottom no-repeat;
+	text-align: center;
+	padding: 26px 10px 40px;
+	position: relative;
+	top: 20px;
+}
+.single-col {
+	clear: both;
+	padding: 1px 0 0 0;
+	margin: 20px 0 0 0;
+}
+.text-page ul {
+	margin: 15px 0;
+}
+.text-page ul li {
+	padding: 3px 30px;
+	background: url("/images/list-bg2.png") 8px 12px no-repeat;
+}
+/*
+	Layout
+*/
+header {
+	background: url("/images/header-bg.jpg") center top no-repeat;
+	height: 116px;
+        min-width: 960px;
+}
+header .logo, header .logo-temp {
+	width: 292px;
+	height: 39px;
+	background: url("/images/dakujeme-logo.png") no-repeat;
+	position: absolute;
+	top: 35px;
+	left: 0;
+}
+header .logo-temp {
+	width: 266px;
+	height: 45px;
+	background: url("/images/dakujeme-logo-temp.png") no-repeat;
+	top: 35px;
+	left: 0;
+}
+header .right {
+	position: absolute;
+	top: 12px;
+	right: 0;
+	text-align: right;
+}
+header .right a {
+	line-height: 20px;
+        font-size: 0.9em;
+}
+header form.search {
+	position: relative;
+	margin: 10px 0 0 0;
+}
+header .search-text {
+	width: 182px;
+	height: 22px;
+	background: url("/images/search-bg.png") no-repeat;
+	line-height: 20px;
+	font-size: 14px;
+	border: none;
+	padding: 8px 10px 8px 14px;
+}
+header .search-button {
+	width: 30px;
+	height: 30px;
+	background: url("/images/search-button.png") no-repeat;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	border: none;
+	cursor: pointer;
+}
+header .search-button:hover {
+	opacity: 0.7;
+}
+/*
+	titulka
+*/
+.see-all {
+	position: absolute;
+	top: 41px;
+	right: 20px;
+}
+/*
+	Prompt
+*/
+.prompt-slider {
+	position: relative;
+	margin: 20px 0 0 0;
+}
+.prompt-slider .arrow-right, .prompt-slider .arrow-left {
+	width: 50px;
+	height: 52px;
+	background: url("/images/dakujeme-sprite.png") -118px -2px no-repeat;
+	position: absolute;
+	top: 200px;
+	right: -11px;
+	z-index: 100;
+}
+.prompt-slider .arrow-right:hover, .prompt-slider .arrow-left:hover {
+	opacity: 0.7;
+}
+.prompt-slider .slide-pager {
+	text-align: center;
+}
+.prompt-slider .slide-pager a, .list-paging .page {
+	width: 8px;
+	height: 9px;
+	background: url("/images/dakujeme-sprite.png") -95px -59px no-repeat;
+	display: inline-block;
+	margin: 15px 3px;
+}
+.prompt-slider .slide-pager a.activeSlide, .list-paging .page.select {
+	background: url("/images/dakujeme-sprite.png") -80px -59px no-repeat;
+}
+.prompt-slider .arrow-left {
+	background: url("/images/dakujeme-sprite.png") -64px -2px no-repeat;
+	right: auto;
+	left: -25px;
+}
+.prompt {
+	background: #fffffe;
+	width: 230px;
+	border: 1px solid #f2efe3;
+	text-align: center;
+	height: 435px;
+	overflow: hidden;
+	margin: 15px 15px 0 0;
+	float: left;
+	position: relative;
+}
+.prompt img {
+	margin: 10px;
+	display: block;
+}
+.prompt h2 {
+	margin: 10px auto;
+	font-size: 1em;
+	line-height: 1.1em;
+}
+.prompt h2 a {
+	height: 35px;
+	display: table-cell;
+	vertical-align: middle;
+	width: 212px;
+	padding: 0 10px;
+}
+.prompt .donate {
+	width: 153px;
+	height: 45px;
+	background: url("/images/donate-small.png") no-repeat;
+	line-height: 45px;
+	font-size: 1em;
+	padding: 0 0 0 30px;
+}
+.prompt .bottom {
+	background: #f2efe3;
+	padding: 15px 0 15px 0;
+	margin: 15px 0 0 0;
+	clear: both;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.prompt table {
+	margin: 10px auto 0;
+	width: 230px;
+}
+.prompt table th {
+	font-size: 0.7em;
+	line-height: 1.2em;
+	vertical-align: middle;
+	padding: 3px;
+	width: 70px;
+}
+.prompt table td {
+	font-weight: bold;
+}
+.prompt .progress-bar {
+	background: url("../images/progress-bg.png") no-repeat;
+	height: 8px;
+	width: 200px;
+	margin: 0 auto 0;
+	position: relative;
+}
+.prompt .progress-bar .in {
+	background: url("../images/progress-bar-bg.png") repeat-x;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	height: 5px;
+}
+.prompt .progress-bar .tooltip {
+	position: absolute;
+	right: -18px;
+	top: -27px;
+	width: 37px;
+	height: 27px;
+	background: url("/images/dakujeme-sprite.png") -20px -2px no-repeat;
+	font-size: 0.7em;
+	font-weight: bold;
+	line-height: 18px;
+}
+/*
+	Advices
+*/
+.right-col .link-box a {
+	width: 80px;
+	display: inline-block;
+	font-size: 0.8em;
+	vertical-align: middle;
+	line-height: 1.2em;
+}
+.right-col .hang {
+	background: url("/images/hang-bg.png") no-repeat;
+	width: 145px;
+	height: 85px;
+	position: absolute;
+	top: -50px;
+	left: 30px;
+        opacity: 0.7;
+}
+.right-col label {
+	font-weight: bold;
+	margin: 10px 0;
+        padding: 0 20px;
+        display: block;
+}
+.right-col .link-box .sep {
+	width: 2px;
+	height: 35px;
+	background: url("/images/sep.png") left center no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+.donated {
+	background: url("/images/donated.png") no-repeat;
+	width: 160px;
+	height: 42px;
+	line-height: 40px;
+	font-weight: bold;
+	display: block;
+	margin: 5px auto;
+	font-size: 1.2em;
+	position: relative;
+}
+.donated .heart {
+	width: 26px;
+	height: 24px;
+	position: absolute;
+	background: url("/images/dakujeme-sprite.png") -177px -4px no-repeat;
+	top: -4px;
+	right: -2px;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+}
+.advice {
+	background: url("/images/advice-bg.png") no-repeat;
+	width: 168px;
+	height: 122px;
+	display: block;
+	overflow: hidden;
+	margin: 3px auto 0;
+}
+.advice img {
+	margin: 11px 0 0 10px;
+	display: block;
+}
+.org-slider {
+	background: white;
+	padding: 10px;
+	margin: 25px 0 0;
+	position: relative;
+	text-align: center;
+}
+.org-slider .org-wrap {
+	height: 75px;
+}
+.org-slider div {
+	width: 940px;
+}
+.org-slider img {
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.org-slider a {
+	display: inline-block;
+	margin: 0 15px;
+}
+.org-slider .arrow-left, .org-slider .arrow-right,
+.list-paging .arrow-left, .list-paging .arrow-right {
+	width: 33px;
+	height: 33px;
+	background: url("/images/dakujeme-sprite.png") -1px -58px no-repeat;
+	position: absolute;
+	top: 35px;
+	left: -16px;
+	display: block;
+	margin: 0;
+	border: none;
+}
+.org-slider .arrow-right,
+.list-paging .arrow-right {
+	right: -16px;
+	left: auto;
+	background-position: -37px -58px;
+}
+/*
+	list
+*/
+.prompt.third {
+	margin-right: 0;
+}
+.list-paging {
+	position: relative;
+	clear: both;
+	padding: 0 20px;
+	text-align: center;
+	padding: 20px 0 0 0;
+}
+.list-paging .arrow-left, .list-paging .arrow-right {
+	position: static;
+	display: inline-block;
+	margin: 0 10px;
+	vertical-align: middle;
+}
+.list-paging .page {
+	vertical-align: middle;
+}
+.list-paging a.page:hover {
+	opacity: 0.8;
+}
+/*
+	prompt
+*/
+.prompt-col1 {
+	float: left;
+	margin: 25px 30px 0 0;
+	width: 230px;
+}
+.prompt-col2 {
+	float: left;
+	width: 472px;
+	margin: 20px 0 0 0;
+}
+.prompt-col2 h2:first-child {margin: 0;}
+
+.prompt-col1 .prompt {
+	margin-top: 0;
+        margin-bottom: 10px;
+	height: auto;
+}
+.prompt-col1 .prompt img {
+	margin-bottom: 15px;
+}
+.prompt-col2 .gallery {
+	background: url("/images/gallery-bg.png") center top repeat-y;
+	text-align: center;
+	margin: 25px 0 0 0;
+}
+.prompt-col2 .gallery a {
+	display: inline-block;
+	padding: 5px;
+	background: white;
+	border: 1px solid #dbd8cc;
+	margin: 6px 4px 46px;
+}
+.prompt-col2 .gallery a img {
+	display: inline-block;
+	vertical-align: top;
+}
+.prompt-col1 .prompt .bottom {
+	position: static;
+}
+.prompt-col1 .prompt .prompt-info {
+	font-size: 0.9em;
+        padding: 0 10px;
+}
+.donate-big {
+	width: 211px;
+	height: 64px;
+	background: url("../images/donate-big.png") no-repeat;
+	margin: 5px auto;
+	cursor: pointer;
+	line-height: 64px;
+	font-family: 'aller_lightregular';
+	font-size: 1.8em;
+	color: white;
+	display: block;
+	text-decoration: none;
+	padding: 0 0 0 25px;
+}
+.donate-big:hover {
+	opacity: 0.8;
+}
+table.data tr td, table.data tr th {
+	font-size: 0.75em;
+	text-align: left;
+	padding: 7px 8px;
+	vertical-align: middle;
+	line-height: 1.4em;
+}
+table.data {
+	margin: 15px 0;
+}
+table.data tr th {
+	font-family: 'aller_lightregular';
+	font-size: 1.1em;
+	color: #805c49;
+	padding: 10px 8px;
+}
+table.data tr td{
+	border-bottom: 1px dotted #dcdbd5;
+	background: #f6f0e9;
+}
+table.data tr:nth-child(odd) td {
+	background: #fffffe;
+}
+/*
+	DONATE form
+*/
+.donate-heading {
+	background: url("/images/donate-heading.png") 0 10px no-repeat;
+	padding: 0 0 0 110px;
+	overflow: hidden;
+	margin: 2em 0 2em 0;
+}
+.donate-heading h1 {
+	margin-top: 5px;
+}
+.donate-heading h3 {
+	margin-top: 10px;
+}
+.data-form {
+	padding: 30px 50px 30px 50px;
+	background: #F2EEE1;
+	margin: 20px 0 0 0;
+}
+.data-form input.normal, .data-form select, .data-form textarea {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #fff;
+	-webkit-box-shadow: inset 0 1px 5px rgba(2,2,2,.07);
+	-moz-box-shadow: inset 0 1px 5px rgba(2,2,2,.07);
+	box-shadow: inset 0 1px 5px rgba(2,2,2,.07);
+	border: solid 1px #dfdbcd;
+	padding: 5px;
+}
+.data-form .code {
+	font-family: "Courier New";
+	-webkit-box-shadow: inset 0 1px 5px rgba(2,2,2,.07);
+	-moz-box-shadow: inset 0 1px 5px rgba(2,2,2,.07);
+	box-shadow: inset 0 1px 5px rgba(2,2,2,.07);
+	border: solid 1px #dfdbcd;
+	padding: 10px;
+	background: white;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 10px 0;
+	display: block;
+}
+.data-form input.normal, .data-form textarea  {
+	width: 90%;
+}
+.data-form input.middle {
+	width: 160px;
+}
+.data-form .full {
+	width: auto;
+	display: block;
+	margin-right: 20px;
+}
+.data-form h3 {
+	margin: 0.7em 0 0.5em;
+	font-size: 1.2em;
+}
+.data-form ol {
+	list-style: decimal;
+	padding: 0 0 0 15px;
+}
+.data-form ol li {
+	margin: 10px 0 0 0;
+}
+.data-form input.small {
+	width: 50px;
+}
+.data-form .needed {
+	color: red;
+	font-size: 0.7em;
+}
+.data-form .inline_message {
+	font-size: 0.7em;
+	color: #99806e;
+	font-style: italic;
+	line-height: 1.5em;
+}
+.data-form .inline_info {
+	background: url("/images/info.png") 5px center no-repeat;
+	padding: 5px 0 5px 40px;
+}
+.data-form table tr td {
+	padding: 5px;
+	vertical-align: middle;
+}
+.data-form table tr td:empty {
+	padding: 0;
+}
+.data-form table tr td.txtr {
+	padding-right: 20px;
+}
+.data-form .donate-big {
+	border: none;
+	width: 245px;
+	margin: auto;
+}
+.data-form table tr td .terms {
+	width: 90%;
+	height: 200px;
+	overflow: auto;
+	background: white;
+	padding: 0 20px;
+	font-size: smaller;
+	border: solid 1px #dfdbcd;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 10px 0;
+}
+.form-button {
+	height: 40px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	background-color: #000;
+	-webkit-box-shadow: 0 1px rgba(0,0,1,.26);
+	-moz-box-shadow: 0 1px rgba(0,0,1,.26);
+	box-shadow: 0 1px rgba(0,0,1,.26);
+	color: white;
+	font-size: 16px;
+	border: none;
+	padding: 0 25px;
+	background: url("/images/form-button-bg.png") #e05e16 repeat-x;
+	margin: 20px 0 0 0;
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	line-height: 40px;
+}
+.form-button:hover {
+	opacity: 0.8;
+	color: white;
+}
+.multipage_proces_info {
+	margin: 20px 0 -20px;
+	overflow: hidden;
+}
+.multipage_proces_info ul li {
+	float: left;
+	padding: 10px 20px 10px 45px;
+	margin: 0 0 0 15px;
+}
+.multipage_proces_info ul li.ia {
+	background: #f5f3ea;
+	color: #a39184;
+	padding: 10px 20px;
+}
+.multipage_proces_info ul li.ac {
+	background: url("/images/progress-actual.png") 15px 10px no-repeat #F2EEE1;
+}
+.head_error {
+	color: red;
+	font-size: 0.8em;
+}
+.inline_error {
+	color: red;
+}
+.head_error p {
+	margin: 5px 0;
+}
+/*
+	List org
+*/
+.letter_filter {
+	text-align: center;
+	width: 620px;
+	margin: 10px auto 20px;
+}
+.letter_filter h3 {
+	color: #aea293;
+	margin: 0.8em 0 1.3em;
+	font-family: 'aller_lightregular';
+	font-weight: normal;
+	font-size: 1.6em;
+}
+.letter_filter ul {
+	margin: 20px 0 0 0;
+}
+.letter_filter ul li {
+	display: inline-block;
+	height: 50px;
+	margin: 0 2px;
+}
+.letter_filter ul li a {
+	padding: 9px 9px 7px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #fdfcf8;
+	-webkit-box-shadow: 0 2px 3px rgba(2,2,2,.14);
+	-moz-box-shadow: 0 2px 3px rgba(2,2,2,.14);
+	box-shadow: 0 2px 3px rgba(2,2,2,.14);
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'aller_lightregular';
+	display: inline-block;
+}
+.letter_filter ul li a:hover {
+	opacity: 0.8;
+}
+.page_list {
+	padding: 30px 50px 30px 50px;
+	background: #F2EEE1;
+	margin: 20px 0 0 0;
+}
+.list-org {
+	margin: 20px 0 20px;
+}
+.list-org h3 {
+	font-size: 1.1em;
+}
+.char {
+	font-family: 'aller_lightregular';
+	font-size: 24px;
+	color: #aea293;
+}
+.list-org h3 {
+	font-weight: normal;
+}
+.g_search_div {
+	margin: 30px 0 0 0;
+}
+/*
+	Darcovia
+*/
+.table-page {
+	padding: 30px 30px 30px 30px;
+}
+.donor-table {
+	width: 100%;
+}
+.donor-table th {
+	padding: 9px;
+	text-align: left;
+}
+.donor-table tr td a img {
+	vertical-align: middle;
+}
+.donor-table tr td {
+	border-bottom: 1px solid #dedacb;
+	padding: 9px 12px;
+	background: #f6f4eb;
+	font-size: 14px;
+}
+/* .donor-table tr:first-child td:first-child { */
+/* 	border-radius: 8px 0 0 0;  */
+/* 	-webikt-border-radius: 8px 0 0 0;  */
+/* 	-moz-border-radius: 8px 0 0 0;  */
+/* } */
+/* .donor-table tr:first-child td:last-child { */
+/* 	border-radius: 0 8px 0 0;  */
+/* 	-webikt-border-radius: 0 8px 0 0;  */
+/* 	-moz-border-radius: 0 8px 0 0;  */
+/* } */
+/* .donor-table tr:last-child td { */
+/* 	border: none; */
+/* } */
+/* .donor-table tr:last-child td:first-child { */
+/* 	border-radius: 0 0 0 8px;  */
+/* 	-webikt-border-radius: 0 0 0 8px;  */
+/* 	-moz-border-radius: 0 0 0 8px;  */
+/* } */
+/* .donor-table tr:last-child td:last-child { */
+/* 	border-radius: 0 0 8px 0;  */
+/* 	-webikt-border-radius: 0 0 8px 0;  */
+/* 	-moz-border-radius: 0 0 8px 0;  */
+/* } */
+.donor-table tr td b {
+	background: #aac85c;
+	padding: 1px 5px;
+	color: white;
+	font-size: 12px;
+	margin: 0 0 0 10px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.donor-table tr:nth-child(odd) td{
+	background: #fdfcf7;
+}
+.pagination {
+	text-align: center;
+	margin: 25px 0 0 0;
+	color: #a7988a;
+}
+.pagination a, .pagination span {
+	-webkit-box-shadow: 0 1px #fff, inset 0 1px rgba(0,0,1,.2);
+	-moz-box-shadow: 0 1px #fff, inset 0 1px rgba(0,0,1,.2);
+	box-shadow: 0 1px #fff, inset 0 1px rgba(0,0,1,.2);
+	display: inline-block;
+	background: #e2dece;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	padding: 5px 8px;
+	height: 15px;
+	text-decoration: none;
+	line-height: 14px;
+	color: #a7988a;
+}
+.pagination span, .pagination a:hover {
+	background: #ef7e41;
+	color: white;
+}
+
+/*
+	zoznam darcov
+*/
+.sme-dakujeme-list-item {
+	overflow: hidden;
+	font-size: 0.95em;
+	padding: 20px 0;
+	border-bottom: 1px solid #dedacb;
+}
+.sme-dakujeme-list-item p {
+	margin: 10px 0 0 0;
+}
+.sme-dakujeme-list-item p:last-child {
+	font-size: 0.9em;
+}
+.sme-dakujeme-list-item .sme-dakujeme-list-item-content-heading {
+	font-size: 1.2em;
+}
+.sme-dakujeme-list-item .sme-dakujeme-list-item-image-small-wrap a {
+	display: inline-block;
+	padding: 5px;
+	background: white;
+	border: 1px solid #dbd8cc;
+}
+.sme-dakujeme-list-item .sme-dakujeme-list-item-image-small-wrap a img {
+	display: block;
+}
+.sme-dakujeme-list-item .sme-dakujeme-list-item-image-small-wrap {
+	width: 120px;
+	float: left;
+}
+.sme-dakujeme-list-item .sme-dakujeme-list-item-content {
+	width: 512px;
+	float: left;
+}
+
+.sme-dakujeme-detail-other-image-item-wrap {
+	float: left;
+	text-align: center;
+	margin: 10px 10px 0 0;
+}
+.sme-dakujeme-detail-other-image-item-wrap label {
+	display: block;
+}
+
+/*
+	footer
+*/
+footer {
+	background: url("/images/footer-bg.jpg") #a5a949 top center repeat-y;
+	color: white;
+	overflow: hidden;
+	line-height: 1.4em;
+	padding: 0 0 40px 0;
+	clear: both;
+	margin-top: 30px;
+        min-width: 960px;
+}
+footer h2 {
+	color: white;
+}
+footer .left {
+	width: 600px;
+	float: left;
+}
+footer .right {
+	width: 360px;
+	float: left;
+}
+footer .button-box {
+	background: rgba(0, 0, 0, .13);
+	height: 52px;
+	padding: 7px;
+	-webkit-border-radius: 32px;
+	-moz-border-radius: 32px;
+	border-radius: 32px;
+	display: inline-block;
+	margin: 10px 0 0 0;
+}
+footer .button-box em {
+	font-style: italic;
+	margin: 0 8px;
+}
+footer .button-box .btn-1, footer .button-box .btn-2 {
+	background: url("/images/btn-1.png") repeat-x;
+	-webkit-border-radius: 32px;
+	-moz-border-radius: 32px;
+	border-radius: 32px;
+	padding: 5px 40px;
+	height: 42px;
+	display: inline-block;
+	line-height: 42px;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+footer .button-box .btn-2 {
+	background: url("/images/btn-2.png") repeat-x;
+	color: white;
+	text-shadow: 0 1px rgba(0,0,1,.38);
+}
+footer .button-box .btn-1:hover, footer .button-box .btn-2:hover {
+	opacity: 0.9;
+}
+footer .sme-blog {
+	position: absolute;
+	top: 39px;
+	right: 155px;
+}
+footer .fb-logo {
+	position: absolute;
+	top: 37px;
+	right: 200px;
+}
+footer ul {
+	margin: 10px;
+}
+footer ul li {
+	background: url("/images/list-bg.png") 0 15px no-repeat;
+	padding: 5px 0 0 20px;
+	list-style-type: none;
+}
+footer ul li a {
+	color: white;
+}
+footer ul li a:hover {
+	color: #ebecdc;
+}
+.under-footer {
+	text-align: center;
+	width: 960px;
+	margin: 30px auto 60px;
+}
+.under-footer a {
+	color: #7a3619;
+	margin: 0 40px 0 0;
+	font-size: 0.8em;
+}
+.under-footer p {
+	color: #9a6b58;
+	font-size: 0.8em;
+	margin: 30px 0 0 0;
+}
+
+.pagination > div {float: none !important;}
+
+/* calendar theme.css pretazenie*/
+
+html body .calendar .button { /* "<<", "<", ">", ">>" buttons have this class */
+  text-align: center;    /* They are the navigation buttons */
+  padding: 2px;          /* Make the buttons seem like they're pressing */
+  background: url("http://cgf.sme.sk/javascripts/jscalendar/skins/aqua/title-bg.gif") repeat-x 0 100%; color: #000;
+  font-weight: bold;
+  height: auto;
+  display: table-cell;
+  line-height: 20px;
+  font-size: 12px;
+  position: static;
+}
+
+.footer-wrapper {
+    background: white;
+    min-width: 960px;
+}
+
+.footer-url{
+    color: white;
+}
+
+/*
+	Gate banner
+*/
+.gate img {
+	display: block;
+}
+.gate {
+	width: 990px;
+	margin: auto;
+	position: relative;
+}
+.gate-left {
+	position: absolute;
+	left: -159px;
+	top: 0;
+	width: 160px;
+	height: 600px;
+}
+.gate-right {
+	position: absolute;
+	right: -160px;
+	top: 0;
+	width: 160px;
+	height: 600px;
 }
