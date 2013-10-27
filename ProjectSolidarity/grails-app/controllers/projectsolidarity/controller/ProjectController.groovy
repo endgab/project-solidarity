@@ -6,6 +6,8 @@ import org.springframework.dao.DataIntegrityViolationException
 class ProjectController {
 	static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 	
+	def projectService
+	
 	def index() {
 		redirect action:"list", params:params
 	}
@@ -24,6 +26,8 @@ class ProjectController {
 
 	def save() {
 		def projectInstance = new Project(params)
+		projectService.initProject(projectInstance)
+		
 		if (!projectInstance.save(flush: true)) {
 			render(view: "create", model: [projectInstance: projectInstance])
 			return
