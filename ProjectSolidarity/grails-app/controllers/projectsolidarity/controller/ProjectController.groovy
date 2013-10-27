@@ -1,12 +1,16 @@
 package projectsolidarity.controller
 
 import projectsolidarity.domain.Project
+import projectsolidarity.domain.User;
+
 import org.springframework.dao.DataIntegrityViolationException
 
 class ProjectController {
 	static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 	
 	def projectService
+	def userService
+	def organizationService
 	
 	def index() {
 		redirect action:"list", params:params
@@ -44,8 +48,13 @@ class ProjectController {
 			redirect(action: "list")
 			return
 		}
-
-		[projectInstance: projectInstance]
+		def projectOwnerProfile = userService.getUserProfile(projectInstance.owner)
+		def organization = organizationService.getOrganization(projectInstance.organization.id)
+		
+		[projectInstance: projectInstance, 
+			projectOwnerFirstName : projectOwnerProfile.firstName,
+			projectOwnerLastName : projectOwnerProfile.lastName,
+			organizationName : organization?.name]
 	}
 
 	def edit(Long id) {

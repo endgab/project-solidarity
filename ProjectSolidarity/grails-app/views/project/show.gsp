@@ -38,13 +38,17 @@
 		        </div>
 		
 		        <div class="prompt-info">
+		        	<p>
+		                <em>Támogató szervezet:</em><br>
+		                <b>${organizationName}</b>
+		            </p>
 		            <p>
-		                <em>Projekt felelőse</em><br>
-		                <b>PETER BALAZ</b>
+		                <em>Felelős</em><br>
+		                <b>${projectOwnerLastName} ${projectOwnerFirstName}</b>
 		            </p>
 		            <p>
 		                <em>Támogatást kéri:</em><br>
-		                <b>Baláž Peter /Adrian</b>
+		                <b>${projectInstance.donatee}</b>
 		            </p>
 		            <p>
 		                <em>Cél</em><br>
@@ -56,10 +60,6 @@
 		            </p>
 		        </div>
 		    </div>
-		    <a class="button" href="/create_form_widget.php?id_challenge=764">
-		        <span class="text">Získavajte dary cez svoj web</span>
-		    	<span class="right"></span>
-		        </a>
 		</div>
 		<div class="prompt-col2">
 		 	${projectInstance.description}    

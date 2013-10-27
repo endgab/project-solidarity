@@ -6,6 +6,7 @@ import projectsolidarity.domain.ProjectStatus
 class ProjectService {
 	
 	def sessionService
+	def userService
 
     def initProject(Project projectInstance) {
 		projectInstance.status = ProjectStatus.ACTIVE
@@ -15,7 +16,9 @@ class ProjectService {
 			def duration = projectInstance.endDate - projectInstance.startDate
 			projectInstance.daysToGo = duration.getDays()
 		 }
-		projectInstance.owner = sessionService.getSessionUser()
+		def user = sessionService.getSessionUser()
+		projectInstance.owner = user
+		projectInstance.organization = userService.getUserProfile(user).organization
 		projectInstance.creationTime = new Date()
 		projectInstance.updateTime = new Date()
     }

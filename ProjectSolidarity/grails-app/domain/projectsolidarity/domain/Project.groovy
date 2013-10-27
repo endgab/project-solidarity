@@ -2,22 +2,24 @@ package projectsolidarity.domain
 
 class Project {
 	String title
+	String donatee
 	String locationCountry
 	String locationCounty
 	String locationCity
 	String shortDescription
-	int daysToGo
 	int neededMoney
-	int collectedPercentage
-	
 	Date startDate
 	Date endDate
 	String description
 	int collectedMoney
-	ProjectStatus status
+	
+	int daysToGo
+	int collectedPercentage
 	static hasMany = [donations: Donation]
 	
+	ProjectStatus status
 	User owner
+	Organization organization
 	Date creationTime
 	Date updateTime
 	
@@ -32,6 +34,7 @@ class Project {
 	
 	static constraints = {
 		title size: 5..64, blank: false
+		donatee size: 5..64, blank: false
 		shortDescription size: 8..140, blank: false
 		description size: 8..3000, blank: false
 		status blank: false

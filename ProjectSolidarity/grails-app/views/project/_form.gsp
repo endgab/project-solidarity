@@ -7,6 +7,13 @@
 	<g:textField name="title" value="${projectInstance?.title}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: projectInstance, field: 'title', 'error')} ">
+	<label for="donatee">
+		<g:message code="project.title.donatee" default="Támogatás alanya" />
+	</label>
+	<g:textField name="donatee" value="${projectInstance?.donatee}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: projectInstance, field: 'shortDescription', 'error')} ">
 	<label for="shortDescription">
 		<g:message code="project.shortDescription.label" default="Rövid leírás" />

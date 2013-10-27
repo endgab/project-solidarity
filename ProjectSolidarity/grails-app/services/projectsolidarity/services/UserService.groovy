@@ -1,6 +1,7 @@
 package projectsolidarity.services
 
 import projectsolidarity.domain.User
+import projectsolidarity.domain.Profile
 
 class UserService {
 	def sessionService
@@ -13,5 +14,10 @@ class UserService {
 	
 	def logoutUser() {
 		sessionService.invalidateSession()
+	}
+	
+	def getUserProfile(User user)
+	{
+		Profile.findByUser(user)
 	}
 }
